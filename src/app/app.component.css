@@ -1,0 +1,51 @@
+.button-functions{
+    background: #EBEBEB;
+
+}
+
+.answer-container {
+    background-color: #FFECD7;
+    width: 50%;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    /* Use flexbox */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    border: 1px solid #ccc;
+    /* Add border for visualization */
+}
+.answer-container-error {
+    background-color: #B70F0A;
+    color: #FFFFFF;
+    width: 50%;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    /* Use flexbox */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    border: 1px solid #ccc;
+    /* Add border for visualization */
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+    font-weight: bold;
+    /* Make button text bold */
+    color: black;
+}
+
+.button-container button {
+    color: black;
+    background-color: #EBEBEB;
+    width: 120px;
+    height: 25px;
+    border-radius: 4px;
+}
