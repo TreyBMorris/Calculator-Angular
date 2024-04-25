@@ -6,26 +6,28 @@
 <div class = "container">
   @if(myError){
     <div class="answer-container-error">
-      <p>Error!!!</p>
+      <p>{{ answerText }}</p>
     </div>
   }
   @else {
     <div class="answer-container">
       <p>{{ answerText }}</p>
+      <p ng-if="answerNumber != null">{{ answerNumber }}</p>
     </div>
   }
 </div>
+
+
+
 <div class="container">
   <div class="row">
     <div class="col-md-3">
       <label>Input A</label>
       <input type="text" class="form-control" placeholder="0" [(ngModel)]="inputA">
-      <p>{{inputA}}</p>
     </div>
     <div class="col-md-3">
       <label>Input B</label>
       <input type="text" class="form-control" placeholder="0" [(ngModel)]="inputB">
-      <p>{{inputB}}</p>
     </div>
     <div class="col-md-3">
       <br>
@@ -34,16 +36,18 @@
     <div class="button-container">
       <h3>A and B</h3>
       <h3>A only</h3>
-      <button type="submit" name="operator" value="add" (click)="enableError()">A + B</button>
-      <button type="submit" name="operator" value="factorial">A!</button>
-      <button type="submit" name="operator" value="subtract">A - B</button>
-      <button type="submit" name="operator" value="multiply">A * B</button>
-      <button type="submit" name="operator" value="divide">A / B</button>
-      <button type="submit" name="operator" value="reciprocal">1 / A</button>
-      <button type="submit" name="operator" value="power">A ^ B</button>
+      <button type="submit" name="operator" value="add" (click)="onSubmitCalculations('add')">A + B</button>
+      <button type="submit" name="operator" value='factorial' (click)="onSubmitCalculations('factorial')">A!</button>
+      <button type="submit" name="operator" value="subtract"(click)="onSubmitCalculations('subtract')">A - B</button>
+      <button type="submit" name="operator" value="reciprocal" (click)="onSubmitCalculations('reciprocal')">1 / A</button>
+      <button type="submit" name="operator" value="multiply"(click)="onSubmitCalculations('multiply')">A * B</button>
       <br>
-      <button type="submit" name="operator" value="log">A log B</button>
+      <button type="submit" name="operator" value="divide"(click)="onSubmitCalculations('divide')">A / B</button>
       <br>
-      <button type="submit" name="operator" value="root">A root B</button>
+      <button type="submit" name="operator" value="power"(click)="onSubmitCalculations('power')">A ^ B</button>
+      <br>
+      <button type="submit" name="operator" value="log"(click)="onSubmitCalculations('log')">A log B</button>
+      <br>
+      <button type="submit" name="operator" value="root"(click)="onSubmitCalculations('root')">A root B</button>
     </div>
   </div>

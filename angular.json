@@ -72,6 +72,9 @@
             },
             "development": {
               "buildTarget": "calculator-angular:build:development"
+            },
+            "options": {
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -106,4 +109,6 @@
   "cli": {
     "analytics": false
   }
+  
 }
+

@@ -9,13 +9,10 @@
     height: 100px;
     text-align: center;
     display: flex;
-    /* Use flexbox */
+    flex-direction: column;
     justify-content: center;
-    /* Center horizontally */
     align-items: center;
-    /* Center vertically */
     border: 1px solid #ccc;
-    /* Add border for visualization */
 }
 .answer-container-error {
     background-color: #B70F0A;
@@ -24,13 +21,9 @@
     height: 100px;
     text-align: center;
     display: flex;
-    /* Use flexbox */
     justify-content: center;
-    /* Center horizontally */
     align-items: center;
-    /* Center vertically */
     border: 1px solid #ccc;
-    /* Add border for visualization */
 }
 
 .button-container {
@@ -38,7 +31,6 @@
     grid-template-columns: auto auto;
     grid-gap: 15px;
     font-weight: bold;
-    /* Make button text bold */
     color: black;
 }
 
@@ -48,4 +40,11 @@
     width: 120px;
     height: 25px;
     border-radius: 4px;
+}
+
+.answer-container p {
+    display: block;
+    /* Ensure each <p> is on a new line */
+    margin-bottom: 0.5em;
+    /* Add space between paragraphs */
 }
